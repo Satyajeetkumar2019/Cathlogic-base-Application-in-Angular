@@ -1,0 +1,47 @@
+<div class="container ">
+    <div class="form-group">
+<h2>Product List</h2>
+<table>
+<tbody>
+<thead>
+<th>Name</th>
+<th>price</th>
+<th>Review </th>
+    </thead>
+    
+    
+<tr *ngfor="let product of product ">
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td><img [src]="product.photo" width="70" height="70" class="img-thumbbnail">
+    </td>
+
+
+    </tr>
+
+</tbody>
+
+    </table>
+
+
+
+
+</div>
+    </div>
+
+    <div class="form-group">
+<h2>Product Cathlog</h2>
+<div class="card-deck text-center">
+    <div class="card" *ngfor="let product of product">
+        <div class="card-header">
+            {{product.name}}
+            </div>
+            <div class="card-body">
+                <img [src]="product.photo" width="200" height="200" class="img-thumbnail">
+                </div>
+
+                <div class="card-pooter ">
+                    <h3>&8377;{{product.price}}</h3>
+                    </div>
+        </div>
+        </div>
